@@ -13,3 +13,28 @@ FreeBSD_DocBot is an innovative tool designed to streamline your interaction wit
 3. Knowledge Base Access: LangChain efficiently retrieves information from the Astra DB, which stores a comprehensive knowledge base of FreeBSD documentation and commands.
 4. Response Generation: The LLM generates a clear and concise response, explaining the command's syntax, usage, and potential output.
 
+# Installation:
+### Pre-requisites:
+#### 1. Create a Database Administrator Token:
+
+ •  Log in to the Astra DB portal.  
+ •  Navigate to the desired database.  
+ •  Click the Generate Token button.  
+ •  Select the Database Administrator role.  
+ •  Copy the generated token.  
+
+#### 2. Identify Your Database ID:
+
+•  Locate the API endpoint URL for your database.  
+•  Extract the portion between https:// and .apps.astra.datastax.com.  
+•  This is your Database ID.    
+  
+You also need an [OpenAI API Key](https://cassio.org/start_here/#llm-access) .      
+
+### Required Dependencies
+```python
+!pip install -q cassio datasets langchain openai tiktoken  
+!pip install PyPDF2    
+!pip install -U langchain-community    
+!pip install openai==0.28
+```
